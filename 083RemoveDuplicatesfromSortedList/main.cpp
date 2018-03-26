@@ -17,10 +17,12 @@ class Solution
         if (head == NULL)
             return head;
         tmp = head;
-        while (tmp->next != NULL && tmp!= NULL)
+        while (tmp->next != NULL && tmp != NULL)
         {
             if (tmp->next->val == tmp->val)
                 tmp->next = tmp->next->next;
+            else
+                tmp = tmp->next;
         }
         return head;
     }

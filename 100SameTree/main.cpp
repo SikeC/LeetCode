@@ -10,14 +10,13 @@ struct TreeNode
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-class Solution
+class Solution  //用递归实现
 {
   public:
     bool isSameTree(TreeNode *p, TreeNode *q)
     {
         if (p == NULL || q == NULL)
             return (p == q);
-
         return ((p->val == q->val) & isSameTree(p->left, q->left) & isSameTree(p->right, q->right));
     }
 };
