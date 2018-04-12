@@ -1,0 +1,14 @@
+#include <iostream>
+#include <stdint.h>
+using namespece std;
+class Solution {
+public:
+    int hammingWeight(uint32_t n) {
+        int count;
+        for (count =0; n; ++count)  
+       {  
+           n &= (n -1) ; //每次消除最右边的1，当n为0结束  
+       }  
+       return count;
+    }
+};
