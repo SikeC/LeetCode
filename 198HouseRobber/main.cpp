@@ -5,7 +5,7 @@ using namespace std;
 class Solution
 {
   public:
-    int rob(vector<int> &nums)//用动态规划思想，每一个数都是包括或者不包括，如果包括那么就是它和i-2之前的最优来，不包括，它就是i-1那个
+    int rob(vector<int> &nums)//用贪心算法，每一个数都是最大，每一个数都是包括或者不包括，如果包括那么就是它和i-2之前的最优来，不包括，它就是i-1那个
     {
         int length=nums.size();
         int i;
